@@ -1,0 +1,49 @@
+/* Select by element name */
+p {
+    color: rgb(34, 0, 255);
+}
+
+/* Select by class */
+.my-class {
+    font-size: 16px;
+}
+
+/* Additional styles for your sign-in page */
+.container {
+    width: 80%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(5, 4, 9, 0.1);
+}
+
+.container img {
+    display: block;
+    margin: 0 auto 20px;
+}
+
+input[type="userid"],
+input[type="password"],
+button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #007bff;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+p {
+    text-align: center;
+}

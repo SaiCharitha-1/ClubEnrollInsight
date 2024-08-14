@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4; /* Set a background color instead of an image */
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column; /* Align items in a column */
+        }
+
+        .thankyou {
+            font-family: Arial, sans-serif; /* Resetting font family */
+            font-size: 60px;
+            font-weight: bold; /* Adding font weight */
+            text-align: center;
+            color: #333; /* Changing text color */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adding text shadow */
+            text-transform: uppercase; /* Transform text to uppercase */
+            margin-bottom: 20px; /* Adjusting margin */
+            animation: moveText 0.5s infinite alternate; /* Animation effect */
+        }
+
+        @keyframes moveText {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-10px);
+            }
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #333; /* Changing text color */
+            margin-bottom: 30px; /* Adjusting margin */
+        }
+
+        .back-btn {
+            background-color: #007bff;
+            color: #fff;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="thankyou">Thank You</div>
+        <h1>Your Submission was Successful</h1>
+        <button class="back-btn" onclick="window.location.href ='portal.html';">Back to Home Page</button>
+    </div>
+</body>
+</html>

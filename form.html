@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Club Registration Form</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-image: url('images/nitap.webp'); /* Replace 'background-image.jpg' with the path to your image */
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: rgba(255, 255, 255, 0.7); /* Adding opacity to make text readable */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  label {
+    font-weight: italic;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="checkbox"] {
+    margin-right: 5px;
+  }
+
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+  }
+
+  input[type="submit"] {
+    background-color: #4554a0;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  input[type="submit"]:hover {
+    background-color: #4554a0;
+  }
+
+  h2 {
+    text-align: center; /* Center aligning the heading */
+  }
+
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Clubs Registration Form</h2>
+  <form id ="registration form" action="form.php" method="post">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required>
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+    <div class="form-group">
+      <label for="phone">Phone</label>
+      <input type="number" id="phone" name="phone" required>
+    </div>
+    <div class="form-group">
+      <label for="roll">RollNo</label>
+      <input type="number" id="roll" name="roll" required>
+    </div>
+    <div class="form-group">
+      <label for="branch">Branch</label>
+      <select  id="branch" name="branch" required>
+        <option value="">Select your branch</option>
+        <option value="CSE">CSE</option>
+        <option value="ECE">ECE</option>
+        <option value="EEE">EEE</option>
+        <option value="Mech">Mech</option>
+        <option value="Civil">Civil</option>
+        <option value="MME">MME</option>
+        <option value="Chemical">Chemical</option>
+        <option value="BioTech">BioTech</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Clubs</label><br>
+      <input type="checkbox" id="Prayatnam" name="clubs[]" value="Prayatnam">
+      <label for="Prayatnam">Prayatnam</label><br>
+
+      <input type="checkbox" id="Dhwani Club" name="clubs[]" value="Dhwani Club">
+      <label for="Dhwani Club">Dhwani Club</label><br>
+
+      <input type="checkbox" id="Dance And Dramatics" name="clubs[]" value="Dance And Dramatics">
+      <label for="Dance And Dramatics">Dance And Dramatics</label><br>
+
+      <input type="checkbox" id="Painting And Photography" name="clubs[]" value="Painting And Photography">
+      <label for="Painting And Photography">Painting And Photography</label><br>
+
+      <input type="checkbox" id="Literary And Debate" name="clubs[]" value="Literary And Debate">
+      <label for="Literary And Debate">Literary And Debate</label><br>
+
+      <input type="checkbox" id="Entrepreneurship And Innovation Cell" name="clubs[]" value="Entrepreneurship And Innovation Cell">
+      <label for="Entrepreneurship And Innovation Cell">Entrepreneurship And Innovation Cell</label><br>
+
+      <input type="checkbox" id="Shrestha" name="clubs[]" value="Shrestha">
+      <label for="Shrestha">Shrestha</label><br>
+      
+      <input type="checkbox" id="AI And Robotics" name="clubs[]" value="AI And Robotics">
+      <label for="AI And Robotics">AI And Robotics</label><br>
+
+      <input type="checkbox" id="Graphics Cafe" name="clubs[]" value="Graphics Cafe">
+      <label for="Graphics Cafe">Graphics Cafe</label><br>
+
+      <input type="checkbox" id="Nature And Value Education" name="clubs[]" value="Nature And Value Education">
+      <label for="Nature And Value Education">Nature And Value Education</label><br>
+
+      <input type="checkbox" id="Magazine" name="clubs[]" value="Magazine">
+      <label for="Magazine">Magazine</label><br>
+
+      <input type="checkbox" id="Physical Education" name="clubs[]" value="Physical Education">
+      <label for="Physical Education">Physical Education</label><br>
+
+      <input type="checkbox" id="E-Yantra" name="clubs[]" value="E-Yantra">
+      <label for="E-Yantra">E-Yantra</label><br>
+
+      <input type="checkbox" id="Brindavanam" name="clubs[]" value="Brindavanam">
+      <label for="Brindavanam">Brindavanam</label><br>
+
+      <input type="checkbox" id="Chitram" name="clubs[]" value="Chitram">
+      <label for="Chitram">Chitram</label><br>
+
+
+    </div>
+    <div class="form-group">
+      <label for="feedback">Feedback</label>
+      <textarea id="feedback" name="feedback" rows="4"></textarea>
+    </div>
+    <input type="hidden" name="to" value="<?php echo htmlspecialchars($_POST['email']); ?>">
+
+    <input type="submit" value="Submit">
+
+  </form>
+</div>
+
+</body>
+</html>
